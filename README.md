@@ -6,3 +6,7 @@ Don't worry, in theory, if it goes badly under the tree you will still find your
 ## ⚠️Warning: 
 This repository contains scratched solutions of AoC challenges.<br>
 **If you haven't done the question of the day yet, reading the posted code will ruin the game experience.**
+
+## Links:
+[Advent of Code 2022](https://adventofcode.com/2022)
+[About AoC](https://adventofcode.com/2022/about)
