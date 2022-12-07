@@ -8,5 +8,8 @@ This repository contains scratched solutions of AoC challenges. <br>
 **If you haven't done the question of the day yet, reading the posted code will ruin the game experience.**
 
 ## Links:
-[Advent of Code 2022](https://adventofcode.com/2022) <br>
-[About AoC](https://adventofcode.com/2022/about)
+
+- Homepage of [Advent of Code 2022](https://adventofcode.com/2022). <br>
+- What is AoC and [about it](https://adventofcode.com/2022/about). <br>
+<br>
+- Personal [Twitter](https://twitter.com/MoraGamesDev) @MoraGamesDev.
