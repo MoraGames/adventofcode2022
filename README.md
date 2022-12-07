@@ -11,5 +11,4 @@ This repository contains scratched solutions of AoC challenges. <br>
 
 - Homepage of [Advent of Code 2022](https://adventofcode.com/2022). <br>
 - What is AoC and [about it](https://adventofcode.com/2022/about). <br>
-<br>
 - Personal [Twitter](https://twitter.com/MoraGamesDev) @MoraGamesDev.
