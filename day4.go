@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"strconv"
 	"strings"
 )
@@ -42,7 +41,7 @@ func d4p1() {
 		//first contains second
 		if elf1F <= elf2F && elf1L >= elf2L {
 			contained++
-			//seconda contains first
+			//second contains first
 		} else if elf2F <= elf1F && elf2L >= elf1L {
 			contained++
 		}

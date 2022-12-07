@@ -25,12 +25,24 @@ func main() {
 	//d6p1()
 	//d6p2()
 
-	d7p1()
+	//d7p1()
 	//d7p2()
+
+	d8p1()
+	//d8p2()
 }
 
 func fileToString(day int) string {
 	path := "./inputs/input_day" + strconv.Itoa(day) + ".txt"
+	rawInput, err := os.ReadFile(path)
+	if err != nil {
+		panic(err)
+	}
+	return string(rawInput)
+}
+
+func testfileToString(day int) string {
+	path := "./inputs/testInput_day" + strconv.Itoa(day) + ".txt"
 	rawInput, err := os.ReadFile(path)
 	if err != nil {
 		panic(err)
