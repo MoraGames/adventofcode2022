@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"strconv"
 	"strings"
@@ -56,4 +57,44 @@ func splitLines(s string) []string {
 
 func splitDoubleLines(s string) []string {
 	return strings.Split(s, "\r\n")
+}
+
+func printIntMatrix(s [][]int) {
+	fmt.Printf("[\n")
+	for r := 0; r < len(s); r++ {
+		fmt.Printf("[")
+		for c := 0; c < len(s[r]); c++ {
+			if c != len(s[r])-1 {
+				fmt.Printf("%v ", s[r][c])
+			}else {
+				fmt.Printf("%v", s[r][c])
+			}
+		}
+		fmt.Printf("]\n")
+	}
+	fmt.Printf("]\n")
+}
+
+func printBoolMatrix(s [][]bool) {
+	fmt.Printf("[\n")
+	for r := 0; r < len(s); r++ {
+		fmt.Printf("[")
+		for c := 0; c < len(s[r]); c++ {
+			if c != len(s[r])-1 {
+				if s[r][c] == true {
+					fmt.Printf("T ")
+				}else{
+					fmt.Printf("F ")
+				}
+			}else {
+				if s[r][c] == true {
+					fmt.Printf("T")
+				}else{
+					fmt.Printf("F")
+				}
+			}
+		}
+		fmt.Printf("]\n")
+	}
+	fmt.Printf("]\n")
 }
