@@ -29,8 +29,11 @@ func main() {
 	//d7p1()
 	//d7p2()
 
-	d8p1()
+	//d8p1()
 	//d8p2()
+
+	d9p1()
+	//d9p2()
 }
 
 func fileToString(day int) string {
@@ -43,7 +46,7 @@ func fileToString(day int) string {
 }
 
 func testfileToString(day int) string {
-	path := "./inputs/testInput_day" + strconv.Itoa(day) + ".txt"
+	path := "./inputs/input_day" + strconv.Itoa(day) + "_test.txt"
 	rawInput, err := os.ReadFile(path)
 	if err != nil {
 		panic(err)
