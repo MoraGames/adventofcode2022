@@ -35,8 +35,8 @@ func main() {
 	//d9p1()
 	//d9p2()
 
-	d10p1()
-	//D10p2()
+	//d10p1()
+	d10p2()
 }
 
 func fileToString(day int) string {
