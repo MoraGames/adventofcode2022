@@ -36,11 +36,14 @@ func main() {
 	//d9p2()
 
 	//d10p1()
-	d10p2()
+	//d10p2()
+
+	d11p1()
+	//d11p2()
 }
 
 func fileToString(day int) string {
-	path := "./inputs/input_day" + strconv.Itoa(day) + ".txt"
+	path := "./inputs/input_day" + dayToString(day) + ".txt"
 	rawInput, err := os.ReadFile(path)
 	if err != nil {
 		panic(err)
@@ -49,12 +52,19 @@ func fileToString(day int) string {
 }
 
 func testfileToString(day int) string {
-	path := "./inputs/input_day" + strconv.Itoa(day) + "_test.txt"
+	path := "./inputs/input_day" + dayToString(day) + "_test.txt"
 	rawInput, err := os.ReadFile(path)
 	if err != nil {
 		panic(err)
 	}
 	return string(rawInput)
+}
+
+func dayToString(day int) string {
+	if day < 10 {
+		return "0" + strconv.Itoa(day)
+	}
+	return strconv.Itoa(day)
 }
 
 func splitLines(s string) []string {
