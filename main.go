@@ -38,8 +38,8 @@ func main() {
 	//d10p1()
 	//d10p2()
 
-	d11p1()
-	//d11p2()
+	//d11p1()
+	d11p2()
 }
 
 func fileToString(day int) string {
@@ -82,7 +82,7 @@ func printIntMatrix(s [][]int) {
 		for c := 0; c < len(s[r]); c++ {
 			if c != len(s[r])-1 {
 				fmt.Printf("%v ", s[r][c])
-			}else {
+			} else {
 				fmt.Printf("%v", s[r][c])
 			}
 		}
@@ -99,13 +99,13 @@ func printBoolMatrix(s [][]bool) {
 			if c != len(s[r])-1 {
 				if s[r][c] == true {
 					fmt.Printf("T ")
-				}else{
+				} else {
 					fmt.Printf("F ")
 				}
-			}else {
+			} else {
 				if s[r][c] == true {
 					fmt.Printf("T")
-				}else{
+				} else {
 					fmt.Printf("F")
 				}
 			}

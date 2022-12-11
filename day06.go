@@ -5,7 +5,7 @@ import "fmt"
 func d6p1() {
 	file := fileToString(6)
 	for i := 0; i < len(file); i++ {
-		section := file[i:i+4]
+		section := file[i : i+4]
 		//fmt.Printf("Section: %v\n", section)
 
 		var exit bool
@@ -23,10 +23,10 @@ func d6p1() {
 	}
 }
 
-func d6p2(){
+func d6p2() {
 	file := fileToString(6)
 	for i := 0; i < len(file); i++ {
-		section := file[i:i+14]
+		section := file[i : i+14]
 		//fmt.Printf("Section: %v\n", section)
 
 		var exit bool

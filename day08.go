@@ -60,7 +60,7 @@ func d8p1() {
 	//Bottom up
 	currentHeight = -1
 	for c := 0; c < len(grid[0]); c++ {
-		for r := len(grid)-1; r >= 0; r-- {
+		for r := len(grid) - 1; r >= 0; r-- {
 			//fmt.Printf("[DEBUG] (%d x %d):\n\theight = %v\n\tgrid = %v\n\tspotted = %v\n", r, c, currentHeight, grid[r][c], spotted[r][c])
 			if grid[r][c] > currentHeight {
 				currentHeight = grid[r][c]
@@ -104,7 +104,7 @@ func d8p1() {
 	//Right left
 	currentHeight = -1
 	for r := 0; r < len(grid); r++ {
-		for c := len(grid[r])-1; c >= 0; c-- {
+		for c := len(grid[r]) - 1; c >= 0; c-- {
 			//fmt.Printf("[DEBUG] (%d x %d):\n\theight = %v\n\tgrid = %v\n\tspotted = %v\n", r, c, currentHeight, grid[r][c], spotted[r][c])
 			if grid[r][c] > currentHeight {
 				currentHeight = grid[r][c]
@@ -161,7 +161,7 @@ func d8p2() {
 
 			//South:
 			//fmt.Printf("\tSouth:\n\t  ")
-			for rs := r+1; rs < len(grid); rs++ {
+			for rs := r + 1; rs < len(grid); rs++ {
 				//fmt.Printf("%d ", grid[rs][c])
 				visibleTree[0]++
 				if grid[rs][c] >= currentHeight {
@@ -170,7 +170,7 @@ func d8p2() {
 			}
 			//North:
 			//fmt.Printf("\tSouth:\n\t  ")
-			for rs := r-1; rs >= 0; rs-- {
+			for rs := r - 1; rs >= 0; rs-- {
 				//fmt.Printf("%d ", grid[rs][c])
 				visibleTree[1]++
 				if grid[rs][c] >= currentHeight {
@@ -179,7 +179,7 @@ func d8p2() {
 			}
 			//Est:
 			//fmt.Printf("\tSouth:\n\t  ")
-			for cs := c+1; cs < len(grid[r]); cs++ {
+			for cs := c + 1; cs < len(grid[r]); cs++ {
 				//fmt.Printf("%d ", grid[r][cs])
 				visibleTree[2]++
 				if grid[r][cs] >= currentHeight {
@@ -188,7 +188,7 @@ func d8p2() {
 			}
 			//West:
 			//fmt.Printf("\tSouth:\n\t  ")
-			for cs := c-1; cs >= 0; cs-- {
+			for cs := c - 1; cs >= 0; cs-- {
 				//fmt.Printf("%d ", grid[r][cs])
 				visibleTree[3]++
 				if grid[r][cs] >= currentHeight {

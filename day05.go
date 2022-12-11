@@ -30,7 +30,7 @@ var stacks = [][]string{
 	{"J", "S", "Q", "C", "W", "D", "M"},
 }
 
-func d5p1(){
+func d5p1() {
 	moves := splitLines(fileToString(5))
 
 	for m := 0; m < len(moves); m++ {
@@ -73,7 +73,7 @@ func d5p1(){
 	}
 }
 
-func d5p2(){
+func d5p2() {
 	moves := splitLines(fileToString(5))
 
 	for m := 0; m < len(moves); m++ {

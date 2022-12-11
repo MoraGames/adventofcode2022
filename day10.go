@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func d10p1(){
+func d10p1() {
 	var currentCycle int //not completed yet
 	var sumSignalStrength, xRegister int = 0, 1
 
@@ -38,7 +38,7 @@ func d10p1(){
 	fmt.Printf("sumSignalStrength = %d\n", sumSignalStrength)
 }
 
-func d10p2(){
+func d10p2() {
 	var currentCycle int //not completed yet
 	var sumSignalStrength, xRegister int = 0, 1
 	var CTR string
@@ -72,35 +72,35 @@ func d10p2(){
 
 	fmt.Printf("\n\n")
 	for i := 0; i < 240; i++ {
-		if i % 40 == 0 {
+		if i%40 == 0 {
 			fmt.Printf("\n")
 		}
 		fmt.Printf("%c", CTR[i])
 	}
 }
 
-func readSignal(sumSignalStrength *int, currentCycle, xRegister int){
+func readSignal(sumSignalStrength *int, currentCycle, xRegister int) {
 	switch currentCycle {
-		case 20:
-			fallthrough
-		case 60:
-			fallthrough
-		case 100:
-			fallthrough
-		case 140:
-			fallthrough
-		case 180:
-			fallthrough
-		case 220:
-			fmt.Printf("\n\t%vth cycle!\n\t(sumSignalStrength = %v | currentCycle = %v | xRegister %v)", currentCycle, *sumSignalStrength, currentCycle, xRegister)
-			*sumSignalStrength += currentCycle * xRegister
+	case 20:
+		fallthrough
+	case 60:
+		fallthrough
+	case 100:
+		fallthrough
+	case 140:
+		fallthrough
+	case 180:
+		fallthrough
+	case 220:
+		fmt.Printf("\n\t%vth cycle!\n\t(sumSignalStrength = %v | currentCycle = %v | xRegister %v)", currentCycle, *sumSignalStrength, currentCycle, xRegister)
+		*sumSignalStrength += currentCycle * xRegister
 	}
 }
 
-func writePixel(CTR *string, currentCycle, xRegister int){
-	if currentCycle%40 == xRegister - 1 || currentCycle%40 == xRegister || currentCycle%40 == xRegister + 1 {
+func writePixel(CTR *string, currentCycle, xRegister int) {
+	if currentCycle%40 == xRegister-1 || currentCycle%40 == xRegister || currentCycle%40 == xRegister+1 {
 		*CTR += "#"
-	}else{
+	} else {
 		*CTR += "."
 	}
 }

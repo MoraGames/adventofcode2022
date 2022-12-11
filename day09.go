@@ -10,6 +10,7 @@ type Coord struct {
 	r int
 	c int
 }
+
 func NewCoord(r, c int) Coord {
 	return Coord{r, c}
 }
@@ -22,7 +23,7 @@ func d9p1() {
 		grid[r] = make([]string, dim)
 	}
 
-	var head, tail = Coord{dim/2, dim/2}, Coord{dim/2, dim/2}
+	var head, tail = Coord{dim / 2, dim / 2}, Coord{dim / 2, dim / 2}
 	grid[tail.r][tail.c] = "#"
 
 	lines := splitLines(fileToString(9))
@@ -35,14 +36,14 @@ func d9p1() {
 
 		for t := 0; t < length; t++ {
 			switch line[0] {
-				case "U": //Up
-					head.r--
-				case "D": //Down
-					head.r++
-				case "R": //Right
-					head.c++
-				case "L": //Left
-					head.c--
+			case "U": //Up
+				head.r--
+			case "D": //Down
+				head.r++
+			case "R": //Right
+				head.c++
+			case "L": //Left
+				head.c--
 			}
 			if closeEnough(head, tail) == false {
 				moveTail(&head, &tail)
@@ -71,7 +72,7 @@ func d9p2() {
 		grid[r] = make([]string, dim)
 	}
 
-	var rope = [10]Coord{{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2},{dim/2, dim/2}}
+	var rope = [10]Coord{{dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}, {dim / 2, dim / 2}}
 	grid[rope[9].r][rope[9].c] = "#"
 
 	lines := splitLines(fileToString(9))
@@ -115,34 +116,34 @@ func d9p2() {
 }
 
 func closeEnough(head, tail Coord) bool {
-	if head.r < tail.r - 1 || head.r > tail.r + 1 || head.c < tail.c - 1 || head.c > tail.c + 1 {
+	if head.r < tail.r-1 || head.r > tail.r+1 || head.c < tail.c-1 || head.c > tail.c+1 {
 		return false
 	}
 	return true
 }
 
-func moveTail(head, tail *Coord){
+func moveTail(head, tail *Coord) {
 	if head.r == tail.r {
 		if head.c < tail.c {
 			tail.c--
-		}else{
+		} else {
 			tail.c++
 		}
-	}else if head.c == tail.c {
+	} else if head.c == tail.c {
 		if head.r < tail.r {
 			tail.r--
-		}else{
+		} else {
 			tail.r++
 		}
-	}else{
+	} else {
 		if head.c < tail.c {
 			tail.c--
-		}else{
+		} else {
 			tail.c++
 		}
 		if head.r < tail.r {
 			tail.r--
-		}else{
+		} else {
 			tail.r++
 		}
 	}
