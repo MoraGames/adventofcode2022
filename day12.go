@@ -1,25 +1,15 @@
 package main
 
-import "fmt"
-
-func d12p1() {
-	file := fileToString(12)
-
-	lines := splitLines(fileToString(12))
-	for l := 0; l < len(lines); l++ {
-		fmt.Print(lines[l])
-	}
-
-	fmt.Print(file, lines)
+func d12p1(){
+	/*
+	 * I did it by counting the shortest solution by hand.
+	 * It was easier and faster than implementing an efficient shortest path finding algorithm.
+	*/
 }
 
-func d12p2() {
-	file := fileToString(12)
-
-	lines := splitLines(fileToString(12))
-	for l := 0; l < len(lines); l++ {
-		fmt.Print(lines[l])
-	}
-
-	fmt.Print(file, lines)
+func d12p2(){
+	/*
+	 * I did it by counting the shortest solution by hand.
+	 * It was easier and faster than implementing an efficient shortest path finding algorithm.
+	 */
 }

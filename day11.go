@@ -212,7 +212,7 @@ func doOperation(operation [2]string, item *int) {
 	var operationValue int
 	if operation[1] == "old" {
 		operationValue = *item
-	}else{
+	} else {
 		var err error
 		operationValue, err = strconv.Atoi(operation[1])
 		if err != nil {

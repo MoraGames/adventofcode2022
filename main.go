@@ -41,8 +41,14 @@ func main() {
 	//d11p1()
 	//d11p2()
 
-	d12p1()
+	//d12p1()
 	//d12p2()
+
+	//d13p1()
+	//d13p2()
+
+	d14p1()
+	//d14p1()
 }
 
 func fileToString(day int) string {
@@ -75,7 +81,7 @@ func splitLines(s string) []string {
 }
 
 func splitDoubleLines(s string) []string {
-	return strings.Split(s, "\r\n")
+	return strings.Split(s, "\r\n\r\n")
 }
 
 func printIntMatrix(s [][]int) {
@@ -87,6 +93,38 @@ func printIntMatrix(s [][]int) {
 				fmt.Printf("%v ", s[r][c])
 			} else {
 				fmt.Printf("%v", s[r][c])
+			}
+		}
+		fmt.Printf("]\n")
+	}
+	fmt.Printf("]\n")
+}
+
+func printStringMatrix(s [][]string) {
+	fmt.Printf("[\n")
+	for r := 0; r < len(s); r++ {
+		fmt.Printf("[")
+		for c := 0; c < len(s[r]); c++ {
+			if c != len(s[r])-1 {
+				fmt.Printf("%v ", s[r][c])
+			} else {
+				fmt.Printf("%v", s[r][c])
+			}
+		}
+		fmt.Printf("]\n")
+	}
+	fmt.Printf("]\n")
+}
+
+func printRuneMatrix(s [][]rune) {
+	fmt.Printf("[\n")
+	for r := 0; r < len(s); r++ {
+		fmt.Printf("[")
+		for c := 0; c < len(s[r]); c++ {
+			if c != len(s[r])-1 {
+				fmt.Printf("%c ", s[r][c])
+			} else {
+				fmt.Printf("%c", s[r][c])
 			}
 		}
 		fmt.Printf("]\n")
@@ -111,6 +149,22 @@ func printBoolMatrix(s [][]bool) {
 				} else {
 					fmt.Printf("F")
 				}
+			}
+		}
+		fmt.Printf("]\n")
+	}
+	fmt.Printf("]\n")
+}
+
+func printMatrix(s [][]interface{}) {
+	fmt.Printf("[\n")
+	for r := 0; r < len(s); r++ {
+		fmt.Printf("[")
+		for c := 0; c < len(s[r]); c++ {
+			if c != len(s[r])-1 {
+				fmt.Printf("%v ", s[r][c])
+			} else {
+				fmt.Printf("%v", s[r][c])
 			}
 		}
 		fmt.Printf("]\n")
