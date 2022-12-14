@@ -47,8 +47,11 @@ func main() {
 	//d13p1()
 	//d13p2()
 
-	d14p1()
 	//d14p1()
+	//d14p2()
+
+	d15p1()
+	//d15p2()
 }
 
 func fileToString(day int) string {

@@ -24,20 +24,20 @@ func d13p1() {
 		comparison := comparePackage(pkgs[0], pkgs[1])
 
 		switch comparison {
-			case 1:
-				fmt.Printf("\tLeft package is smaller\n")
+		case 1:
+			fmt.Printf("\tLeft package is smaller\n")
+			fmt.Printf("ORDERED")
+			orderedPairs++
+			sumPairsIndex += p + 1
+		case 0:
+			if len(splitList(pkgs[1])) >= len(splitList(pkgs[0])) {
+				fmt.Printf("\tLeft package is equal to Right package\n")
 				fmt.Printf("ORDERED")
 				orderedPairs++
-				sumPairsIndex += p+1
-			case 0:
-				if len(splitList(pkgs[1])) >= len(splitList(pkgs[0])) {
-					fmt.Printf("\tLeft package is equal to Right package\n")
-					fmt.Printf("ORDERED")
-					orderedPairs++
-					sumPairsIndex += p+1
-				}
-			case -1:
-				fmt.Printf("\tRight package is smaller\n")
+				sumPairsIndex += p + 1
+			}
+		case -1:
+			fmt.Printf("\tRight package is smaller\n")
 		}
 		fmt.Printf("\n\n\n")
 	}
@@ -49,7 +49,7 @@ func d13p2() {
 	file := fileToString(13)
 	//file := testfileToString(13)
 
-	packages := strings.Split(strings.Join(strings.Split(file, "\r\n\r\n"), "\r\n") + "\r\n[[2]]\r\n[[6]]", "\r\n")
+	packages := strings.Split(strings.Join(strings.Split(file, "\r\n\r\n"), "\r\n")+"\r\n[[2]]\r\n[[6]]", "\r\n")
 
 	for p := 0; p < len(packages); p++ {
 		fmt.Printf("%v\n", packages[p])
@@ -57,7 +57,7 @@ func d13p2() {
 
 	for isDone := false; isDone == false; {
 		isDone = true
-		for p := 0; p < len(packages) - 1; p++ {
+		for p := 0; p < len(packages)-1; p++ {
 			if comparePackage(packages[p], packages[p+1]) == -1 {
 				packages[p], packages[p+1] = packages[p+1], packages[p]
 				isDone = false
@@ -236,7 +236,7 @@ func splitList(list string) []string {
 	var slicedList []string
 	var bracketsCounter, slicingIndex int = 0, 1
 
-	for i := 1; i < len(list) - 1; i++ {
+	for i := 1; i < len(list)-1; i++ {
 		if list[i] == '[' {
 			bracketsCounter++
 		} else if list[i] == ']' {

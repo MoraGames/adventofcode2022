@@ -8,7 +8,7 @@ import (
 
 func d10p1() {
 	var currentCycle int //not completed yet
-	var sumSignalStrength, xRegister int = 0, 1
+	var sumSignalStrength, xRegister = 0, 1
 
 	lines := splitLines(fileToString(10))
 	for l := 0; l < len(lines); l++ {
@@ -40,7 +40,7 @@ func d10p1() {
 
 func d10p2() {
 	var currentCycle int //not completed yet
-	var sumSignalStrength, xRegister int = 0, 1
+	var sumSignalStrength, xRegister = 0, 1
 	var CTR string
 
 	lines := splitLines(fileToString(10))

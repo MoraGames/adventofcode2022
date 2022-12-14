@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func d[]p1() {
+	file := fileToString([])
+
+	lines := splitLines(fileToString([]))
+	for l := 0; l < len(lines); l++ {
+		fmt.Printf("%v", lines[l])
+	}
+
+	fmt.Printf("%v", file)
+}
+
+func d[]p2() {
+	file := fileToString([])
+
+	lines := splitLines(fileToString([]))
+	for l := 0; l < len(lines); l++ {
+		fmt.Printf("%v", lines[l])
+	}
+
+	fmt.Printf("%v", file)
+}
+
+
+
+//Double click on empty square brackets to easily replace them with the day.
+//Or Find-Replace "[]" with the day.
